@@ -1,0 +1,1 @@
+const circleCanvas: HTMLCanvasElement = document.getElementById("circle-canvas");
