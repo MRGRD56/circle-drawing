@@ -15,6 +15,9 @@ export default class Thickness {
         createThickness0(): Thickness {
             return new Thickness(0, 0, 0, 0);
         },
+        createThickness1(all: number): Thickness {
+            return new Thickness(all, all, all, all);
+        },
         createThickness2(vertical: number, horizontal: number): Thickness {
             return new Thickness(vertical, horizontal, vertical, horizontal);
         },
