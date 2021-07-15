@@ -47,16 +47,21 @@ function drawCircle(canvas: HTMLCanvasElement, radius: number, pointsCount: numb
 const circleCanvas = <HTMLCanvasElement>document.getElementById("circle-canvas");
 
 let i = 0;
-const intervalId = setInterval(() => {
-    if (i >= 360) {
-        clearInterval(intervalId);
+let increment = 1;
+setInterval(() => {
+    if (i >= 100) {
+        increment = -1;
+    }
+    else if (i <= 1) {
+        increment = 1;
     }
     console.log(i);
     drawCircle(
         circleCanvas,
         300,
-        i++,
+        i,
         5,
         "#2196f3",
         Thickness.factory.createThickness2(10, 20));
+    i += increment;
 }, 50)
