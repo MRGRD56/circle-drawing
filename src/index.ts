@@ -28,9 +28,6 @@ function drawCircle(canvas: HTMLCanvasElement, radius: number, pointsCount: numb
         canvasContext.arc(point.x, point.y, width, 0, 2 * Math.PI, false);
         canvasContext.fillStyle = color;
         canvasContext.fill();
-        // canvasContext.lineWidth = width;
-        // canvasContext.strokeStyle = color;
-        // canvasContext.stroke();
     }
 
     for (let point = 0; point < pointsCount; point++) {
@@ -59,7 +56,7 @@ setInterval(() => {
         circleCanvas,
         300,
         i,
-        8,
+        7,
         "#2196f3",
         Thickness.factory.createThickness1(10));
     i += increment;
